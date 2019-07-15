@@ -1,0 +1,403 @@
+2019-07-11 15:05:14 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: VeryAccurate)
+2019-07-11 15:05:14 [scrapy.utils.log] INFO: Versions: lxml 4.3.4.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 19.2.1, Python 3.7.1 (v3.7.1:260ec2c36a, Oct 20 2018, 14:57:15) [MSC v.1915 64 bit (AMD64)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1b  26 Feb 2019), cryptography 2.6.1, Platform Windows-10-10.0.17134-SP0
+2019-07-11 15:05:14 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'VeryAccurate', 'COOKIES_ENABLED': False, 'LOG_FILE': 'log/veryaccurate_2019_7_11.log', 'NEWSPIDER_MODULE': 'VeryAccurate.spiders', 'SPIDER_MODULES': ['VeryAccurate.spiders']}
+2019-07-11 15:05:14 [scrapy.extensions.telnet] INFO: Telnet Password: 3da731da2035d5d3
+2019-07-11 15:05:14 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2019-07-11 15:05:14 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'VeryAccurate.middlewares.RandomUesrAgent',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-07-11 15:05:14 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-07-11 15:05:14 [scrapy.middleware] INFO: Enabled item pipelines:
+['VeryAccurate.pipelines.FilePipeline']
+2019-07-11 15:05:14 [scrapy.core.engine] INFO: Spider opened
+2019-07-11 15:05:14 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-07-11 15:05:14 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2019-07-11 15:05:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.variflight.com/flight/fnum/MU5527.html?AE71649A58c77&fdate=20190711> (referer: None)
+2019-07-11 15:05:15 [root] ERROR: 程序出现异常: [Errno 22] Invalid argument
+2019-07-11 15:05:15 [scrapy.core.engine] INFO: Closing spider (finished)
+2019-07-11 15:05:15 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 300,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 9012,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2019, 7, 11, 7, 5, 15, 56949),
+ 'log_count/DEBUG': 1,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 9,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2019, 7, 11, 7, 5, 14, 776625)}
+2019-07-11 15:05:15 [scrapy.core.engine] INFO: Spider closed (finished)
+2019-07-11 15:05:16 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: VeryAccurate)
+2019-07-11 15:05:16 [scrapy.utils.log] INFO: Versions: lxml 4.3.4.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 19.2.1, Python 3.7.1 (v3.7.1:260ec2c36a, Oct 20 2018, 14:57:15) [MSC v.1915 64 bit (AMD64)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1b  26 Feb 2019), cryptography 2.6.1, Platform Windows-10-10.0.17134-SP0
+2019-07-11 15:05:16 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'VeryAccurate', 'COOKIES_ENABLED': False, 'LOG_FILE': 'log/veryaccurate_2019_7_11.log', 'NEWSPIDER_MODULE': 'VeryAccurate.spiders', 'SPIDER_MODULES': ['VeryAccurate.spiders']}
+2019-07-11 15:05:16 [scrapy.extensions.telnet] INFO: Telnet Password: f02bcc6d125466da
+2019-07-11 15:05:16 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2019-07-11 15:05:17 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'VeryAccurate.middlewares.RandomUesrAgent',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-07-11 15:05:17 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-07-11 15:05:17 [scrapy.middleware] INFO: Enabled item pipelines:
+['VeryAccurate.pipelines.FilePipeline']
+2019-07-11 15:05:17 [scrapy.core.engine] INFO: Spider opened
+2019-07-11 15:05:17 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-07-11 15:05:17 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2019-07-11 15:05:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.variflight.com/flight/fnum/MU5527.html?AE71649A58c77&fdate=20190711> (referer: None)
+2019-07-11 15:05:17 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.variflight.com:80
+2019-07-11 15:05:17 [urllib3.connectionpool] DEBUG: http://www.variflight.com:80 "GET /flight/detail/productImg&s=ZEh6R0hYUExVL1BGbmZhWlNVTC9rOVdxQVVnPQ==&w=50&h=28&fontSize=13&fontColor=2f3032&background=ffffff?AE71649A58c77= HTTP/1.1" 200 911
+2019-07-11 15:05:17 [PIL.PngImagePlugin] DEBUG: STREAM b'IHDR' 16 13
+2019-07-11 15:05:17 [PIL.PngImagePlugin] DEBUG: STREAM b'IDAT' 41 831
+2019-07-11 15:05:18 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.variflight.com:80
+2019-07-11 15:05:18 [urllib3.connectionpool] DEBUG: http://www.variflight.com:80 "GET /flight/detail/productImg&s=VzlMYlh1WUcvNnhMSDRuNTBxL2NvU1E0ZGxFPQ==&w=50&h=28&fontSize=13&fontColor=2f3032&background=ffffff?AE71649A58c77= HTTP/1.1" 200 1143
+2019-07-11 15:05:18 [PIL.PngImagePlugin] DEBUG: STREAM b'IHDR' 16 13
+2019-07-11 15:05:18 [PIL.PngImagePlugin] DEBUG: STREAM b'IDAT' 41 1063
+2019-07-11 15:05:18 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.variflight.com:80
+2019-07-11 15:05:18 [urllib3.connectionpool] DEBUG: http://www.variflight.com:80 "GET /flight/detail/productImg&s=aVNpemlhUVZqOCtDTkdEQzJaaHJXeUhzeXNnTlRGNTA=&w=63&h=28&fontSize=13&fontColor=2f3032&background=ffffff?AE71649A58c77= HTTP/1.1" 200 1448
+2019-07-11 15:05:18 [PIL.PngImagePlugin] DEBUG: STREAM b'IHDR' 16 13
+2019-07-11 15:05:18 [PIL.PngImagePlugin] DEBUG: STREAM b'IDAT' 41 1368
+2019-07-11 15:05:18 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.variflight.com:80
+2019-07-11 15:05:19 [urllib3.connectionpool] DEBUG: http://www.variflight.com:80 "GET /schedule/CKG-TYN-MU5527.html?AE71649A58c77= HTTP/1.1" 200 8618
+2019-07-11 15:05:19 [root] ERROR: 程序出现异常: 'VeryaccurateItem' object is not an iterator
+2019-07-11 15:05:19 [scrapy.core.engine] INFO: Closing spider (finished)
+2019-07-11 15:05:19 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 343,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 9015,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2019, 7, 11, 7, 5, 19, 277512),
+ 'log_count/DEBUG': 15,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 9,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2019, 7, 11, 7, 5, 17, 274040)}
+2019-07-11 15:05:19 [scrapy.core.engine] INFO: Spider closed (finished)
+2019-07-11 15:11:05 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: VeryAccurate)
+2019-07-11 15:11:05 [scrapy.utils.log] INFO: Versions: lxml 4.3.4.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 19.2.1, Python 3.7.1 (v3.7.1:260ec2c36a, Oct 20 2018, 14:57:15) [MSC v.1915 64 bit (AMD64)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1b  26 Feb 2019), cryptography 2.6.1, Platform Windows-10-10.0.17134-SP0
+2019-07-11 15:11:05 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'VeryAccurate', 'COOKIES_ENABLED': False, 'LOG_FILE': 'log/veryaccurate_2019_7_11.log', 'NEWSPIDER_MODULE': 'VeryAccurate.spiders', 'SPIDER_MODULES': ['VeryAccurate.spiders']}
+2019-07-11 15:11:05 [scrapy.extensions.telnet] INFO: Telnet Password: eacf2a5e5c662ba5
+2019-07-11 15:11:05 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2019-07-11 15:11:05 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'VeryAccurate.middlewares.RandomUesrAgent',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-07-11 15:11:05 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-07-11 15:11:05 [scrapy.middleware] INFO: Enabled item pipelines:
+['VeryAccurate.pipelines.FilePipeline']
+2019-07-11 15:11:05 [scrapy.core.engine] INFO: Spider opened
+2019-07-11 15:11:05 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-07-11 15:11:05 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2019-07-11 15:11:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.variflight.com/flight/fnum/MU5527.html?AE71649A58c77&fdate=20190711> (referer: None)
+2019-07-11 15:11:05 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.variflight.com:80
+2019-07-11 15:11:06 [urllib3.connectionpool] DEBUG: http://www.variflight.com:80 "GET /flight/detail/productImg&s=NGZETzdjMzZQMDNnc3N1TDlJUEZacUJjclNnPQ==&w=50&h=28&fontSize=13&fontColor=2f3032&background=ffffff?AE71649A58c77= HTTP/1.1" 200 911
+2019-07-11 15:11:06 [PIL.PngImagePlugin] DEBUG: STREAM b'IHDR' 16 13
+2019-07-11 15:11:06 [PIL.PngImagePlugin] DEBUG: STREAM b'IDAT' 41 831
+2019-07-11 15:11:06 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.variflight.com:80
+2019-07-11 15:11:06 [urllib3.connectionpool] DEBUG: http://www.variflight.com:80 "GET /flight/detail/productImg&s=NW5KdkRhUjZTY2thVW5xd1RnWkYrSmpYb05rPQ==&w=50&h=28&fontSize=13&fontColor=2f3032&background=ffffff?AE71649A58c77= HTTP/1.1" 200 1143
+2019-07-11 15:11:06 [PIL.PngImagePlugin] DEBUG: STREAM b'IHDR' 16 13
+2019-07-11 15:11:06 [PIL.PngImagePlugin] DEBUG: STREAM b'IDAT' 41 1063
+2019-07-11 15:11:06 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.variflight.com:80
+2019-07-11 15:11:07 [urllib3.connectionpool] DEBUG: http://www.variflight.com:80 "GET /flight/detail/productImg&s=RFZaNno2MTg0NyszRmFkV3hSUHZwNWdoMEI3bEZVVzA=&w=63&h=28&fontSize=13&fontColor=2f3032&background=ffffff?AE71649A58c77= HTTP/1.1" 200 1448
+2019-07-11 15:11:07 [PIL.PngImagePlugin] DEBUG: STREAM b'IHDR' 16 13
+2019-07-11 15:11:07 [PIL.PngImagePlugin] DEBUG: STREAM b'IDAT' 41 1368
+2019-07-11 15:11:07 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.variflight.com:80
+2019-07-11 15:11:07 [urllib3.connectionpool] DEBUG: http://www.variflight.com:80 "GET /schedule/CKG-TYN-MU5527.html?AE71649A58c77= HTTP/1.1" 200 8626
+2019-07-11 15:11:07 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.variflight.com/flight/fnum/MU5527.html?AE71649A58c77&fdate=20190711>
+{'FlightArrAirport': '太原武宿',
+ 'FlightArrtime': '14:48',
+ 'FlightArrtimePlan': '14:40',
+ 'FlightCompany': '东方航空',
+ 'FlightDepAirport': '重庆江北',
+ 'FlightDeptime': '12:58',
+ 'FlightDeptimePlan': '12:45',
+ 'FlightDuration': '时长1小时50分',
+ 'FlightHTerminal': 'T3',
+ 'FlightNum': 'MU5527',
+ 'FlightState': '到达',
+ 'FlightTerminal': 'T2',
+ 'FlightYear': '5.7年',
+ 'OntimeRate': '96.77%',
+ 'distance': '全程1129公里',
+ 'generic': 'BOEING737-800 WINGLETS'}
+2019-07-11 15:11:07 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.variflight.com:80
+2019-07-11 15:11:07 [urllib3.connectionpool] DEBUG: http://www.variflight.com:80 "GET /flight/detail/productImg&s=NW5KdkRhUjZTY2thVW5xd1RnWkYrSmpYb05rPQ==&w=50&h=28&fontSize=13&fontColor=2f3032&background=ffffff?AE71649A58c77= HTTP/1.1" 200 1143
+2019-07-11 15:11:07 [PIL.PngImagePlugin] DEBUG: STREAM b'IHDR' 16 13
+2019-07-11 15:11:07 [PIL.PngImagePlugin] DEBUG: STREAM b'IDAT' 41 1063
+2019-07-11 15:11:08 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.variflight.com:80
+2019-07-11 15:11:08 [urllib3.connectionpool] DEBUG: http://www.variflight.com:80 "GET /flight/detail/productImg&s=SVFnbTVzSFhqcnFZZnp0a3Fyb1U5NXdBT05mNXVrZXc=&w=63&h=28&fontSize=13&fontColor=2f3032&background=ffffff?AE71649A58c77= HTTP/1.1" 200 1313
+2019-07-11 15:11:08 [PIL.PngImagePlugin] DEBUG: STREAM b'IHDR' 16 13
+2019-07-11 15:11:08 [PIL.PngImagePlugin] DEBUG: STREAM b'IDAT' 41 1233
+2019-07-11 15:11:08 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.variflight.com:80
+2019-07-11 15:11:09 [urllib3.connectionpool] DEBUG: http://www.variflight.com:80 "GET /schedule/CKG-PEK-MU5527.html?AE71649A58c77= HTTP/1.1" 200 9175
+2019-07-11 15:11:09 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: VeryAccurate)
+2019-07-11 15:11:09 [scrapy.utils.log] INFO: Versions: lxml 4.3.4.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 19.2.1, Python 3.7.1 (v3.7.1:260ec2c36a, Oct 20 2018, 14:57:15) [MSC v.1915 64 bit (AMD64)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1b  26 Feb 2019), cryptography 2.6.1, Platform Windows-10-10.0.17134-SP0
+2019-07-11 15:11:09 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'VeryAccurate', 'COOKIES_ENABLED': False, 'LOG_FILE': 'log/veryaccurate_2019_7_11.log', 'NEWSPIDER_MODULE': 'VeryAccurate.spiders', 'SPIDER_MODULES': ['VeryAccurate.spiders']}
+2019-07-11 15:11:09 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.variflight.com/flight/fnum/MU5527.html?AE71649A58c77&fdate=20190711>
+{'FlightArrAirport': '北京首都',
+ 'FlightArrtime': '暂无信息',
+ 'FlightArrtimePlan': '16:45',
+ 'FlightCompany': '东方航空',
+ 'FlightDepAirport': '重庆江北',
+ 'FlightDeptime': '12:58',
+ 'FlightDeptimePlan': '12:45',
+ 'FlightDuration': '时长2小时42分',
+ 'FlightHTerminal': 'T3',
+ 'FlightNum': 'MU5527',
+ 'FlightState': '起飞',
+ 'FlightTerminal': 'T2',
+ 'FlightYear': '5.7年',
+ 'OntimeRate': '81.82%',
+ 'distance': '全程1651公里',
+ 'generic': 'BOEING737-800 WINGLETS'}
+2019-07-11 15:11:09 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.variflight.com:80
+2019-07-11 15:11:09 [scrapy.extensions.telnet] INFO: Telnet Password: 3ed2d1e8cd642168
+2019-07-11 15:11:09 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2019-07-11 15:11:09 [urllib3.connectionpool] DEBUG: http://www.variflight.com:80 "GET /flight/detail/productImg&s=UXlZTlVabUd6SnExMGNYSzdsNlFpUmtzUGVmZ0lNdXE=&w=63&h=28&fontSize=13&fontColor=2f3032&background=ffffff?AE71649A58c77= HTTP/1.1" 200 1690
+2019-07-11 15:11:09 [PIL.PngImagePlugin] DEBUG: STREAM b'IHDR' 16 13
+2019-07-11 15:11:09 [PIL.PngImagePlugin] DEBUG: STREAM b'IDAT' 41 1610
+2019-07-11 15:11:09 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'VeryAccurate.middlewares.RandomUesrAgent',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-07-11 15:11:09 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-07-11 15:11:09 [scrapy.middleware] INFO: Enabled item pipelines:
+['VeryAccurate.pipelines.FilePipeline']
+2019-07-11 15:11:09 [scrapy.core.engine] INFO: Spider opened
+2019-07-11 15:11:09 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-07-11 15:11:09 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6024
+2019-07-11 15:11:09 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.variflight.com:80
+2019-07-11 15:11:09 [urllib3.connectionpool] DEBUG: http://www.variflight.com:80 "GET /schedule/TYN-PEK-MU5527.html?AE71649A58c77= HTTP/1.1" 200 8842
+2019-07-11 15:11:09 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.variflight.com/flight/fnum/MU5527.html?AE71649A58c77&fdate=20190711>
+{'FlightArrAirport': '北京首都',
+ 'FlightArrtime': '暂无信息',
+ 'FlightArrtimePlan': '16:45',
+ 'FlightCompany': '东方航空',
+ 'FlightDepAirport': '太原武宿',
+ 'FlightDeptime': '暂无信息',
+ 'FlightDeptimePlan': '15:30',
+ 'FlightDuration': '时长0小时52分',
+ 'FlightHTerminal': 'T2',
+ 'FlightNum': 'MU5527',
+ 'FlightState': '延误预警',
+ 'FlightTerminal': 'T2',
+ 'FlightYear': '5.7年',
+ 'OntimeRate': '69.23%',
+ 'distance': '全程522公里',
+ 'generic': 'BOEING737-800 WINGLETS'}
+2019-07-11 15:11:09 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.variflight.com/flight/fnum/MU5527.html?AE71649A58c77&fdate=20190711> (referer: None)
+Traceback (most recent call last):
+  File "e:\python37\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "e:\python37\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "e:\python37\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "e:\python37\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "e:\python37\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "F:\Pycharm_projects\VeryAccurate\VeryAccurate\spiders\veryaccurate.py", line 207, in parse_page
+    print(log)
+OSError: [Errno 22] Invalid argument
+2019-07-11 15:11:09 [scrapy.core.engine] INFO: Closing spider (finished)
+2019-07-11 15:11:09 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 343,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 9013,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2019, 7, 11, 7, 11, 9, 936299),
+ 'item_scraped_count': 3,
+ 'log_count/DEBUG': 34,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 9,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'spider_exceptions/OSError': 1,
+ 'start_time': datetime.datetime(2019, 7, 11, 7, 11, 5, 407477)}
+2019-07-11 15:11:09 [scrapy.core.engine] INFO: Spider closed (finished)
+2019-07-11 15:11:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.variflight.com/flight/fnum/MU5527.html?AE71649A58c77&fdate=20190711> (referer: None)
+2019-07-11 15:11:10 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.variflight.com:80
+2019-07-11 15:11:10 [urllib3.connectionpool] DEBUG: http://www.variflight.com:80 "GET /flight/detail/productImg&s=YlQzdU5ZSzc3V2lWMWMwTzM0a3hzakZET2dVPQ==&w=50&h=28&fontSize=13&fontColor=2f3032&background=ffffff?AE71649A58c77= HTTP/1.1" 200 1143
+2019-07-11 15:11:10 [PIL.PngImagePlugin] DEBUG: STREAM b'IHDR' 16 13
+2019-07-11 15:11:10 [PIL.PngImagePlugin] DEBUG: STREAM b'IDAT' 41 1063
+2019-07-11 15:11:10 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.variflight.com:80
+2019-07-11 15:11:10 [urllib3.connectionpool] DEBUG: http://www.variflight.com:80 "GET /flight/detail/productImg&s=Y1hkNzB3ZS9XMHFYUXRyTzhRMWp2ZHZNa3gwPQ==&w=50&h=28&fontSize=13&fontColor=2f3032&background=ffffff?AE71649A58c77= HTTP/1.1" 200 911
+2019-07-11 15:11:10 [PIL.PngImagePlugin] DEBUG: STREAM b'IHDR' 16 13
+2019-07-11 15:11:10 [PIL.PngImagePlugin] DEBUG: STREAM b'IDAT' 41 831
+2019-07-11 15:11:10 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.variflight.com:80
+2019-07-11 15:11:11 [urllib3.connectionpool] DEBUG: http://www.variflight.com:80 "GET /flight/detail/productImg&s=Zlk5Y0JsbGtwT2EwVHV0U3B3Z1RrZHJQT2ZlMmRTU2E=&w=63&h=28&fontSize=13&fontColor=2f3032&background=ffffff?AE71649A58c77= HTTP/1.1" 200 1448
+2019-07-11 15:11:11 [PIL.PngImagePlugin] DEBUG: STREAM b'IHDR' 16 13
+2019-07-11 15:11:11 [PIL.PngImagePlugin] DEBUG: STREAM b'IDAT' 41 1368
+2019-07-11 15:11:11 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.variflight.com:80
+2019-07-11 15:11:11 [urllib3.connectionpool] DEBUG: http://www.variflight.com:80 "GET /schedule/CKG-TYN-MU5527.html?AE71649A58c77= HTTP/1.1" 200 8622
+2019-07-11 15:11:11 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.variflight.com/flight/fnum/MU5527.html?AE71649A58c77&fdate=20190711>
+{'FlightArrAirport': '太原武宿',
+ 'FlightArrtime': '14:48',
+ 'FlightArrtimePlan': '14:40',
+ 'FlightCompany': '东方航空',
+ 'FlightDepAirport': '重庆江北',
+ 'FlightDeptime': '12:58',
+ 'FlightDeptimePlan': '12:45',
+ 'FlightDuration': '时长1小时50分',
+ 'FlightHTerminal': 'T3',
+ 'FlightNum': 'MU5527',
+ 'FlightState': '到达',
+ 'FlightTerminal': 'T2',
+ 'FlightYear': '5.7年',
+ 'OntimeRate': '96.77%',
+ 'distance': '全程1129公里',
+ 'generic': 'BOEING737-800 WINGLETS'}
+2019-07-11 15:11:11 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.variflight.com:80
+2019-07-11 15:11:11 [urllib3.connectionpool] DEBUG: http://www.variflight.com:80 "GET /flight/detail/productImg&s=YlQzdU5ZSzc3V2lWMWMwTzM0a3hzakZET2dVPQ==&w=50&h=28&fontSize=13&fontColor=2f3032&background=ffffff?AE71649A58c77= HTTP/1.1" 200 1143
+2019-07-11 15:11:11 [PIL.PngImagePlugin] DEBUG: STREAM b'IHDR' 16 13
+2019-07-11 15:11:11 [PIL.PngImagePlugin] DEBUG: STREAM b'IDAT' 41 1063
+2019-07-11 15:11:11 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.variflight.com:80
+2019-07-11 15:11:12 [urllib3.connectionpool] DEBUG: http://www.variflight.com:80 "GET /flight/detail/productImg&s=QVd1NmxDcUt5VHVlS0tXR3JzOHYzM08ySVBjTFQrS28=&w=63&h=28&fontSize=13&fontColor=2f3032&background=ffffff?AE71649A58c77= HTTP/1.1" 200 1313
+2019-07-11 15:11:12 [PIL.PngImagePlugin] DEBUG: STREAM b'IHDR' 16 13
+2019-07-11 15:11:12 [PIL.PngImagePlugin] DEBUG: STREAM b'IDAT' 41 1233
+2019-07-11 15:11:12 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.variflight.com:80
+2019-07-11 15:11:12 [urllib3.connectionpool] DEBUG: http://www.variflight.com:80 "GET /schedule/CKG-PEK-MU5527.html?AE71649A58c77= HTTP/1.1" 200 9168
+2019-07-11 15:11:12 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.variflight.com/flight/fnum/MU5527.html?AE71649A58c77&fdate=20190711>
+{'FlightArrAirport': '北京首都',
+ 'FlightArrtime': '暂无信息',
+ 'FlightArrtimePlan': '16:45',
+ 'FlightCompany': '东方航空',
+ 'FlightDepAirport': '重庆江北',
+ 'FlightDeptime': '12:58',
+ 'FlightDeptimePlan': '12:45',
+ 'FlightDuration': '时长2小时42分',
+ 'FlightHTerminal': 'T3',
+ 'FlightNum': 'MU5527',
+ 'FlightState': '起飞',
+ 'FlightTerminal': 'T2',
+ 'FlightYear': '5.7年',
+ 'OntimeRate': '81.82%',
+ 'distance': '全程1651公里',
+ 'generic': 'BOEING737-800 WINGLETS'}
+2019-07-11 15:11:12 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.variflight.com:80
+2019-07-11 15:11:12 [urllib3.connectionpool] DEBUG: http://www.variflight.com:80 "GET /flight/detail/productImg&s=d3UxaEVCNW0vNXJxTE1XRzNMTVgwQitWb0YzV3MyV20=&w=63&h=28&fontSize=13&fontColor=2f3032&background=ffffff?AE71649A58c77= HTTP/1.1" 200 1690
+2019-07-11 15:11:12 [PIL.PngImagePlugin] DEBUG: STREAM b'IHDR' 16 13
+2019-07-11 15:11:12 [PIL.PngImagePlugin] DEBUG: STREAM b'IDAT' 41 1610
+2019-07-11 15:11:13 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.variflight.com:80
+2019-07-11 15:11:13 [urllib3.connectionpool] DEBUG: http://www.variflight.com:80 "GET /schedule/TYN-PEK-MU5527.html?AE71649A58c77= HTTP/1.1" 200 8839
+2019-07-11 15:11:13 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.variflight.com/flight/fnum/MU5527.html?AE71649A58c77&fdate=20190711>
+{'FlightArrAirport': '北京首都',
+ 'FlightArrtime': '暂无信息',
+ 'FlightArrtimePlan': '16:45',
+ 'FlightCompany': '东方航空',
+ 'FlightDepAirport': '太原武宿',
+ 'FlightDeptime': '暂无信息',
+ 'FlightDeptimePlan': '15:30',
+ 'FlightDuration': '时长0小时52分',
+ 'FlightHTerminal': 'T2',
+ 'FlightNum': 'MU5527',
+ 'FlightState': '延误预警',
+ 'FlightTerminal': 'T2',
+ 'FlightYear': '5.7年',
+ 'OntimeRate': '69.23%',
+ 'distance': '全程522公里',
+ 'generic': 'BOEING737-800 WINGLETS'}
+2019-07-11 15:11:13 [scrapy.core.engine] INFO: Closing spider (finished)
+2019-07-11 15:11:13 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 348,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 9020,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2019, 7, 11, 7, 11, 13, 606487),
+ 'item_scraped_count': 3,
+ 'log_count/DEBUG': 34,
+ 'log_count/INFO': 9,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2019, 7, 11, 7, 11, 9, 553324)}
+2019-07-11 15:11:13 [scrapy.core.engine] INFO: Spider closed (finished)
