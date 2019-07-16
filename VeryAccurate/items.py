@@ -13,7 +13,7 @@ class VeryaccurateItem(scrapy.Item):
     # 航空公司
     FlightCompany = scrapy.Field()
     #航班号
-    FlightNum = scrapy.Field()
+    FlightNo = scrapy.Field()
     # 出发城市及机场
     FlightDepAirport = scrapy.Field()
     # 登机口
@@ -42,3 +42,6 @@ class VeryaccurateItem(scrapy.Item):
     FlightDuration = scrapy.Field()
     # 飞机状态
     FlightState = scrapy.Field()
+
+    #不存在航班信息
+    NoInfo = scrapy.Field()

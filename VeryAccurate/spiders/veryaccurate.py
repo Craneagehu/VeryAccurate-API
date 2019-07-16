@@ -1,19 +1,18 @@
 #-*- coding: utf-8 -*-
-import json
+
 import logging
 import re
 import time
-from urllib.parse import urljoin
-from urllib.request import urlretrieve
-
-import requests
-from bs4 import BeautifulSoup
-from fake_useragent import UserAgent
 import scrapy
+import requests
 from PIL import Image
-from VeryAccurate.items import VeryaccurateItem
-from lxml import etree
+from bs4 import BeautifulSoup
+from urllib.parse import urljoin
+from fake_useragent import UserAgent
 from pytesseract import pytesseract
+from VeryAccurate.items import VeryaccurateItem
+
+
 
 
 class VeryaccurateSpider(scrapy.Spider):
@@ -30,8 +29,8 @@ class VeryaccurateSpider(scrapy.Spider):
     def parse_page(self,response):
         item = VeryaccurateItem()
         headers = {
-            # 'User-Agent': UserAgent().random,
-            'User-Agent': "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36",
+            'User-Agent': UserAgent().random,
+            #'User-Agent': "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36",
             'Accept': "*/*",
             'Cache-Control': "no-cache",
             'Host': "www.variflight.com",
@@ -110,7 +109,7 @@ class VeryaccurateSpider(scrapy.Spider):
                             f.write(res.content)
                         image = Image.open(f"F:\\Pycharm_projects\\VeryAccurate\\VeryAccurate\\spiders\\pic\\{actual_start_time_filename}.jpg")
                         FlightDeptime = pytesseract.image_to_string(image)
-                        FlightArrtime = '暂无信息'
+                        FlightArrtime = ''
 
 
                     elif FlightArrtime_img_link and not FlightDeptime_img_link :
@@ -125,11 +124,11 @@ class VeryaccurateSpider(scrapy.Spider):
                             f"F:\\Pycharm_projects\\VeryAccurate\\VeryAccurate\\spiders\\pic\\{actual_arrive_time_filename}.jpg")
 
                         FlightDeptime = pytesseract.image_to_string(image)
-                        FlightArrtime = '暂无信息'
+                        FlightArrtime = ''
 
                     else:
-                        FlightDeptime = '暂无信息'
-                        FlightArrtime = '暂无信息'
+                        FlightDeptime = ''
+                        FlightArrtime = ''
 
 
                     # 出发地
@@ -179,29 +178,31 @@ class VeryaccurateSpider(scrapy.Spider):
 
                     #飞行时间
                     FlightDuration = soup.select('div[class="p_ti"] span')[0].next_sibling.next_sibling.get_text()
+
+                    item["FlightNo"] = flight_num
                     item["FlightCompany"] = flight_company
-                    item["FlightNum"] = flight_num
-                    item["FlightDeptimePlan"] = FlightDeptimePlan
-                    item["FlightDeptime"] = FlightDeptime
                     item["FlightDepAirport"] = FlightDepAirport
                     item["FlightHTerminal"] = FlightHTerminal
-                    item["FlightArrtimePlan"] = FlightArrtimePlan
-                    item["FlightArrtime"] = FlightArrtime
+                    item["FlightDeptimePlan"] = FlightDeptimePlan
+                    item["FlightDeptime"] = FlightDeptime
                     item["FlightArrAirport"] = FlightArrAirport
                     item["FlightTerminal"] = FlightTerminal
-                    item["OntimeRate"] = OntimeRate
-                    item["FlightState"] = FlightState
+                    item["FlightArrtimePlan"] = FlightArrtimePlan
+                    item["FlightArrtime"] = FlightArrtime
                     item["generic"] = generic
                     item["FlightYear"] = FlightYear
+                    item["OntimeRate"] = OntimeRate
                     item["distance"] = distance
                     item["FlightDuration"] = FlightDuration
+                    item["FlightState"] = FlightState
 
                     yield item
 
             else:
                 name = response.xpath('//*[@id="byNumInput"]/@value').extract_first()
-                log = "{0}航班不存在信息...".format(name)
-                print(log)
+                log = "{0}航班不存在信息".format(name)
+                item['NoInfo'] = log
+                yield item
 
         except Exception as e:
             logging.error(f'程序出现异常!!!: {e}')

@@ -68,6 +68,7 @@ DOWNLOADER_MIDDLEWARES = {
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
    'VeryAccurate.pipelines.FilePipeline': 300,
+   'VeryAccurate.pipelines.MysqlPipeline': 301,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -98,3 +99,10 @@ ITEM_PIPELINES = {
 # log_file_path = 'log/veryaccurate_{}_{}_{}.log'.format(to_day.year, to_day.month, to_day.day)
 # LOG_FILE = log_file_path
 #
+
+
+MYSQL_HOST = 'localhost'
+MYSQL_DBNAME = 'data_query'
+MYSQL_USER = 'root'
+MYSQL_PASSWORD = 'admin'
+MYSQL_PORT = 3306

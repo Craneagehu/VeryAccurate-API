@@ -1,11 +1,11 @@
-import requests
+import pymysql
 import json
+import requests
 import threading
-from prettytable import PrettyTable
 from queue import Queue
 
-class VariFlight(object):
 
+class VariFlight(object):
     def __init__(self,flight_num,date):
         self.flight_num = flight_num
         self.date = date
@@ -21,6 +21,9 @@ class VariFlight(object):
         self.q = Queue()
         self.q.put((self.flight_num,self.date))
         self.lock = threading.Lock()
+        self.conn = pymysql.connect(host='localhost', user='root', password='admin', database='data_query', port=3306,charset='utf8')
+        self.cur = self.conn.cursor()
+
     #返回数据
     def return_data(self,json_data):
 
@@ -64,9 +67,6 @@ class VariFlight(object):
         else:
             FlightArrtime = ''
 
-        # 到达温度
-        #arrWeatherTemper = json_data['arrWeatherTemper']
-
         #机型
         generic = json_data['generic']
 
@@ -84,27 +84,9 @@ class VariFlight(object):
 
         # 飞机状态
         FlightState = json_data['FlightState']
-        #
-        # info_list = []
-        #
-        # info_list.append(self.flightnum)
-        # info_list.append(FlightCompany)
-        # info_list.append(FlightDepAirport)
-        # info_list.append(FlightHTerminal)
-        # info_list.append(FlightDeptimePlan)
-        # info_list.append(FlightDeptime)
-        # info_list.append(FlightArrAirport)
-        # info_list.append(FlightTerminal)
-        # info_list.append(FlightArrtimePlan)
-        # info_list.append(FlightArrtime)
-        # info_list.append(generic)
-        # info_list.append(FlightYear)
-        # info_list.append(OntimeRate)
-        # info_list.append(distance)
-        # info_list.append(FlightDuration)
-        # info_list.append(FlightState)
 
         info_dic = {}
+
         info_dic['FlightNo'] = FlightNo
         info_dic['FlightCompany'] = FlightCompany
         info_dic['FlightDepAirport'] = FlightDepAirport
@@ -120,7 +102,7 @@ class VariFlight(object):
         info_dic['OntimeRate'] = OntimeRate
         info_dic['distance'] = distance
         info_dic['FlightDuration'] = FlightDuration
-        info_dic['FlightState'] =FlightState
+        info_dic['FlightState'] = FlightState
 
         # pt = PrettyTable(['航班号', '航空公司', '出发城市', '登机口', '计划起飞', '实际起飞', '到达城市', '出机口', '计划到达', '实际到达', '机型', '机龄', \
         #                   '历史准点率', '总里程(公里)', '飞行时间(分钟)', '航班状态'])
@@ -129,8 +111,22 @@ class VariFlight(object):
         # print(pt)
         self.Info.append(info_dic)
 
+        #保存到数据库
+        self.save2Mysql(info_dic)
+
         with open('flight_info2.json','w',encoding='utf-8') as f:
             f.write(json.dumps(self.Info,ensure_ascii=False)+ '\n')
+
+    def save2Mysql(self,data):
+        keys = ','.join(data.keys())
+        values = ','.join(['%s'] * len(data))
+
+        insert_sql = "insert into flight_info (%s) values (%s)" % (keys, values)
+        self.cur.execute(insert_sql, tuple(data.values()))
+        self.conn.commit()
+
+
+
 
     def run(self):
         if not self.q.empty():
@@ -162,7 +158,28 @@ class VariFlight(object):
             # 未查到数据
             elif len(json_data)== 2:
                 json_data = json_data['error']
-                return json_data
+                with open('flight_info2.json', 'w', encoding='utf-8') as f:
+                    f.write(json.dumps(json_data, ensure_ascii=False) + '\n')
+                info_dic = {}
+
+                info_dic['FlightNo'] = flight_num
+                info_dic['FlightCompany'] = ''
+                info_dic['FlightDepAirport'] = ''
+                info_dic['FlightHTerminal'] = ''
+                info_dic['FlightDeptimePlan'] = ''
+                info_dic['FlightDeptime'] = ''
+                info_dic['FlightArrAirport'] = ''
+                info_dic['FlightTerminal'] = ''
+                info_dic['FlightArrtimePlan'] = ''
+                info_dic['FlightArrtime'] = ''
+                info_dic['generic'] = ''
+                info_dic['FlightYear'] = ''
+                info_dic['OntimeRate'] = ''
+                info_dic['distance'] = ''
+                info_dic['FlightDuration'] = ''
+                info_dic['FlightState'] = ''
+
+                self.save2Mysql(info_dic)
 
             #存在多条数据
             elif len(json_data)> 2:
