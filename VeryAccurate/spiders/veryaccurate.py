@@ -201,7 +201,7 @@ class VeryaccurateSpider(scrapy.Spider):
             else:
                 name = response.xpath('//*[@id="byNumInput"]/@value').extract_first()
                 log = "{0}航班不存在信息".format(name)
-                item['NoInfo'] = log
+                item['result'] = log
                 yield item
 
         except Exception as e:

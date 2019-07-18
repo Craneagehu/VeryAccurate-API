@@ -104,11 +104,6 @@ class VariFlight(object):
         info_dic['FlightDuration'] = FlightDuration
         info_dic['FlightState'] = FlightState
 
-        # pt = PrettyTable(['航班号', '航空公司', '出发城市', '登机口', '计划起飞', '实际起飞', '到达城市', '出机口', '计划到达', '实际到达', '机型', '机龄', \
-        #                   '历史准点率', '总里程(公里)', '飞行时间(分钟)', '航班状态'])
-        # for each in Info:
-        #     pt.add_row(each.values())
-        # print(pt)
         self.Info.append(info_dic)
 
         #保存到数据库
@@ -125,9 +120,7 @@ class VariFlight(object):
         self.cur.execute(insert_sql, tuple(data.values()))
         self.conn.commit()
 
-
-
-
+    #主函数
     def run(self):
         if not self.q.empty():
             tup = self.q.get()

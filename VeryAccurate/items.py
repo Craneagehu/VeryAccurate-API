@@ -44,4 +44,4 @@ class VeryaccurateItem(scrapy.Item):
     FlightState = scrapy.Field()
 
     #不存在航班信息
-    NoInfo = scrapy.Field()
+    result = scrapy.Field()
