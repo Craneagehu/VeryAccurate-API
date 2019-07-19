@@ -48,9 +48,6 @@ class VariFlight(object):
         else:
             FlightDeptime = ''
 
-        # 出发温度
-        #depWeatherTemper = json_data['depWeatherTemper']
-
         # 降落城市和机场
         FlightArrAirport = json_data['FlightArrAirport']
 
@@ -127,7 +124,6 @@ class VariFlight(object):
             flight_num = tup[0]
             date = tup[1]
             date = date[:4] + '-' + date[4:6] + '-' + date[6:8]
-
             self.lock.acquire()
 
             data = {
@@ -136,7 +132,6 @@ class VariFlight(object):
                 'token': '74e5d4cac3179fc076af4f401fd4ebe3'
 
             }
-
             response = requests.get(self.base_url,params=data,headers=self.headers)
             response.encoding = 'utf-8'
             json_data = json.loads(response.text)
@@ -146,13 +141,13 @@ class VariFlight(object):
             #查到一条数据
             if len(json_data)== 1:
                 json_data = json_data[0]
-                return self.return_data(json_data)
+                self.return_data(json_data)
 
             # 未查到数据
             elif len(json_data)== 2:
                 json_data = json_data['error']
-                with open('flight_info2.json', 'w', encoding='utf-8') as f:
-                    f.write(json.dumps(json_data, ensure_ascii=False) + '\n')
+                self.Info.append(json_data)
+
                 info_dic = {}
 
                 info_dic['FlightNo'] = flight_num
@@ -186,14 +181,14 @@ class VariFlight(object):
     #创建多线程
     def MyThread(self):
         thread_list = []
-        for i in range(4):
+        for i in range(6):
             thread = threading.Thread(target=self.run)
             thread_list.append(thread)
             thread.start()
 
         for t in thread_list:
             t.join()
-
+        return self.Info
 
 #主函数入口
 if __name__ == '__main__':
@@ -201,4 +196,5 @@ if __name__ == '__main__':
     flight_num = input("请输入航班号: ").upper().strip()
     date = input("请输入查询日期: ").strip()
     variflitht = VariFlight(flight_num,date)
-    variflitht.MyThread()
+    data = variflitht.MyThread()
+    print(data)
